@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Flask App</h1>
+            <p class="subtitle">A classic, full-fledged web experience powered by Flask, HTML, CSS, JS</p>
+        </header>
+        <main>
+            <section class="hero">
+                <p>This is a simple Flask application with HTML, CSS, and JavaScript integration.</p>
+            </section>
+            <section class="form-section">
+                <form action="/submit" method="post">
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <label for="password">Enter your password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="submit">Submit</button>
+                </form>
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </section>
+            <section class="interactive">
+                <button id="myButton">Click Me!</button>
+                <div id="message"></div>
+            </section>
+            <div class="server-info">
+                <p>Current Server Time: <span class="highlight">{{ current_time }}</span></p>
+                <p>Today date: <span class="highlight">{{ day_of_week }}</span></p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Flask App | Designed by You</p>
+        </footer>
+    </div>
+</body>
+
+</html>
