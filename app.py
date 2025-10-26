@@ -1,3 +1,15 @@
+# Sample Flask application
+# To run the application, use the command: python app.py
+# Then, navigate to http://
+# localhost:5000/ in your web browser.r  
+
+# The application will display the message: "Hi This is a sample Flask application!"
+# in your web browser.
+# The application is set to run in debug mode for easier development and troubleshooting.
+# Make sure you have Flask installed in your Python environment.
+# You can install Flask using pip:
+# pip install Flask
+# This application defines a single route ('/') that returns a simple string message.
 from flask import Flask, render_template, request, redirect, url_for
 from datetime import datetime
 from dotenv import load_dotenv
@@ -27,34 +39,3 @@ def submit():
     return render_template('submit.html')
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Sample Flask application
-# To run the application, use the command: python app.py
-# Then, navigate to http://
-# localhost:5000/ in your web browser.r  
-
-# The application will display the message: "Hi This is a sample Flask application!"
-# in your web browser.
-# The application is set to run in debug mode for easier development and troubleshooting.
-# Make sure you have Flask installed in your Python environment.
-# You can install Flask using pip:
-# pip install Flask
-# This application defines a single route ('/') that returns a simple string message.
